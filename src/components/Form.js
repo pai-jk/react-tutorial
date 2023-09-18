@@ -3,12 +3,14 @@ import React, { useState } from "react";
 function Form(props) {
   const [name, setName] = useState("");
 
+  // App의 todo 생성 함수 호출
   function handleSubmit(e) {
     e.preventDefault();
     props.addTask(name);
     setName("");
   }
 
+  // form input 갑 변경시 임시 저장
   function handleChange(e) {
     setName(e.target.value);
   }

@@ -4,10 +4,12 @@ function Todo(props) {
   const [isEditing, setEditing] = useState(false); // edit, view 템플릿 토글 훅
   const [newName, setNewName] = useState("");
 
+  // Todo edit input값 변경시 해당 값 임시 저장
   function handleChange(e) {
     setNewName(e.target.value);
   }
 
+  // App의 Todo 이름 수정 함수 호출
   function handleSubmit(e) {
     e.preventDefault();
     props.editTask(props.id, newName);
@@ -76,6 +78,7 @@ function Todo(props) {
     </div>
   );
 
+  // isEditing 삼항 연산자
   return <li className="todo">{isEditing ? editingTemplate : viewTemplate}</li>;
 }
 

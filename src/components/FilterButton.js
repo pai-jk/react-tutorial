@@ -5,7 +5,7 @@ function FilterButton(props) {
     <button
       type="button"
       className="btn toggle-btn"
-      aria-pressed={props.isPressed}
+      aria-pressed={props.isPressed} // 해당 버튼이 눌린 상태인지 아닌지
       onClick={() => props.setFilter(props.name)}
     >
       <span className="visually-hidden">보여주다</span>
